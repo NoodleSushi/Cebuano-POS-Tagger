@@ -12,7 +12,7 @@ setup(
   keywords = ['pos-tagger', 'cebuano-pos-tagger'],
   classifiers = [],
   install_requires=[
-    'cebstemmer @ git+https://github.com/NoodleSushi/Cebuano-Dictionary.git',
+    'cebstemmer @ git+https://github.com/NoodleSushi/Cebuano-Stemmer.git',
     'nltk'
   ]
 )
