@@ -4,9 +4,9 @@ from nltk.tokenize import word_tokenize
 from cebdict import dictionary
 from cebstemmer import stemmer
 
-from utilities import read_file, write_file
-from wrappers import Word
-from repos import  lexical_rules, contextual_rules
+from .utilities import read_file, write_file
+from .wrappers import Word
+from .repos import  lexical_rules, contextual_rules
 
 
 '''

@@ -1,5 +1,5 @@
-from utilities import read_file, write_file
-from wrappers import LexicalRule, ContextualRule, ContextCondition
+from .utilities import read_file, write_file
+from .wrappers import LexicalRule, ContextualRule, ContextCondition
 
 '''
 Fetch lexical rules
