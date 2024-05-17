@@ -1,6 +1,7 @@
 import string
 # from polyglot.text import Text
 from nltk.tokenize import word_tokenize
+import nltk
 from cebdict import dictionary
 from cebstemmer import stemmer
 
@@ -8,6 +9,10 @@ from .utilities import read_file, write_file
 from .wrappers import Word
 from .repos import  lexical_rules, contextual_rules
 
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 '''
 Given a Cebuano sentence, it will tag all words with its corresponding POS tags
