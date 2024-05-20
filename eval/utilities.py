@@ -20,10 +20,11 @@ def write_file(name=None, contents=[], per_line=True, mode="w", add_newline=True
             if append_newline:
                 content = content + '\n'
             if per_line:
-                if no_encode:
-                    f.write(content)
-                else:
-                    f.write(content.encode('utf-8'))
+                # no need to encode
+                # if no_encode:
+                f.write(content)
+                # else:
+                #     f.write(content.encode('utf-8'))
                 if add_newline:
                     f.write("\n")
             else:
@@ -57,8 +58,9 @@ def read_file(name=None, start=None, end=None, strip=False, dict_format=False, d
                 line = line.strip()
             splitted = line.split(" ")
             dictionary[splitted[0]] = splitted[1:]
-            if decode:
-                line = line.decode('utf-8')
+            # no need to decode
+            # if decode:
+            #     line = line.decode('utf-8')
             contents.append(line)
 
         f.close()
